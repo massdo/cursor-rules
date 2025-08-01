@@ -1,0 +1,60 @@
+---
+description: "Enforce use of Notion MCP tools and provide best practices for workspace management"
+alwaysApply: false
+---
+
+# Notion MCP Rules
+
+## Mandatory Tool Usage
+ALWAYS use Notion MCP tools for any Notion workspace operations. Never use direct API calls or other methods.
+
+## Available Tools
+- `search` - Search workspace and connected tools (Slack, Google Drive, Jira)
+- `fetch` - Retrieve content from page/database URLs
+- `create-pages` - Create new pages with properties and content
+- `update-page` - Modify page properties or content
+- `move-pages` - Reorganize pages/databases
+- `duplicate-page` - Copy existing pages
+- `create-database` - Create new databases with custom properties
+- `update-database` - Modify database schema and properties
+- `create-comment` - Add comments to pages
+- `get-comments` - Retrieve page comments
+- `get-users` - List workspace users
+- `get-user` - Get specific user info
+- `get-self` - Get bot user info
+
+## Best Practices
+
+### Page Organization
+- Always specify a parent when creating pages to maintain proper hierarchy
+- Use descriptive titles and consistent naming conventions
+- Group related pages under appropriate parent pages
+- Create template pages for recurring content types
+
+### Database Management
+- Design clear property schemas with appropriate field types
+- Use consistent property naming across related databases
+- Include essential fields: status, priority, assignee, dates
+- Set up proper relations between related databases
+- Add helpful descriptions to database properties
+
+### Content Structure
+- Use proper heading hierarchy (H1, H2, H3)
+- Include table of contents for longer documents
+- Add relevant tags and properties for searchability
+- Use callouts for important information
+- Structure content with consistent formatting
+
+### Workflow Optimization
+- Combine multiple operations in single prompts when possible
+- Use search before creating to avoid duplicates
+- Update related pages when making changes
+- Maintain consistent status tracking across projects
+- Use comments for collaboration and feedback
+
+### Data Integrity
+- Always fetch existing content before major updates
+- Verify parent-child relationships when moving pages
+- Check for dependencies before deleting or moving
+- Use proper property types for data validation
+- Keep related information synchronized across pages
